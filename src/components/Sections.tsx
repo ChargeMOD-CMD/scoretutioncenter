@@ -297,6 +297,20 @@ export function Contact() {
           <Clock className="h-4 w-4 text-accent" />
           <span><b className="text-foreground">Hours:</b> Weekdays 4:00 PM – 9:00 PM · Weekends 9:00 AM – 6:00 PM</span>
         </div>
+        <div className="mt-6 glass rounded-2xl p-2 shadow-card overflow-hidden">
+          <div className="rounded-xl overflow-hidden bg-white">
+            <iframe
+              title="SCORE MORE Tuition Centre — Location"
+              src="https://www.google.com/maps?q=Chennai,Tamil+Nadu,India&hl=en&z=12&output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0, colorScheme: "light" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
