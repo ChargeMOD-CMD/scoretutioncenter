@@ -76,7 +76,7 @@
   --secondary-foreground: oklch(0.98 0.005 250);
   --muted: oklch(0.22 0.03 265);
   --muted-foreground: oklch(0.72 0.03 260);
-  --accent: oklch(0.74 0.14 200);              /* Cyan #06B6D4 */
+  --accent: oklch(0.78 0.17 165);              /* Emerald-Teal #10D9A0 */
   --accent-foreground: oklch(0.13 0.04 265);
   --destructive: oklch(0.62 0.24 27);
   --destructive-foreground: oklch(0.984 0.003 247.858);
@@ -85,11 +85,11 @@
   --ring: oklch(0.62 0.21 280);
 
   /* Brand tokens */
-  --highlight: oklch(0.74 0.14 200);
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.62 0.21 280 / 0.35), transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.74 0.14 200 / 0.25), transparent 60%), oklch(0.13 0.04 265);
-  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.21 280), oklch(0.74 0.14 200));
-  --gradient-text: linear-gradient(135deg, oklch(0.98 0.005 250), oklch(0.74 0.14 200));
-  --shadow-glow: 0 0 40px oklch(0.62 0.21 280 / 0.45), 0 0 80px oklch(0.74 0.14 200 / 0.2);
+  --highlight: oklch(0.75 0.19 25);            /* Coral magenta #FF5E73 — unique third color */
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.62 0.21 280 / 0.35), transparent 60%), radial-gradient(ellipse at bottom left, oklch(0.78 0.17 165 / 0.22), transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.75 0.19 25 / 0.20), transparent 60%), oklch(0.13 0.04 265);
+  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.21 280), oklch(0.78 0.17 165) 60%, oklch(0.75 0.19 25));
+  --gradient-text: linear-gradient(135deg, oklch(0.98 0.005 250), oklch(0.78 0.17 165) 60%, oklch(0.75 0.19 25));
+  --shadow-glow: 0 0 40px oklch(0.62 0.21 280 / 0.45), 0 0 80px oklch(0.75 0.19 25 / 0.25);
   --shadow-card: 0 20px 60px -20px oklch(0.05 0.04 265 / 0.7);
   --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 
