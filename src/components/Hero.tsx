@@ -1,6 +1,5 @@
-import { ArrowRight, Sparkles, BookOpen, Brain, Atom, Sigma, FlaskConical, Languages } from "lucide-react";
-
-const ORBIT_ICONS = [BookOpen, Brain, Atom, Sigma, FlaskConical, Languages];
+import { ArrowRight, Sparkles } from "lucide-react";
+import heroStudent from "@/assets/hero-student.jpg";
 
 export function Hero() {
   return (
@@ -69,25 +68,37 @@ export function Hero() {
           </dl>
         </div>
 
-        {/* Knowledge orb */}
-        <div className="relative h-[480px] hidden lg:block">
+        {/* Editorial portrait */}
+        <div className="relative h-[560px] hidden lg:block">
+          {/* gilded outer ring */}
+          <div className="absolute inset-6 rounded-[2rem] bg-gradient-gold opacity-90 blur-2xl" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative h-72 w-72 rounded-full bg-gradient-gold shadow-glow animate-pulse-glow flex items-center justify-center">
-              <div className="absolute inset-3 rounded-full bg-background/40 backdrop-blur-sm border border-white/10" />
-              <Brain className="h-24 w-24 text-primary-foreground relative z-10" />
-              {/* orbit ring */}
-              <div className="absolute inset-[-60px] rounded-full border border-primary/50" />
-              <div className="absolute inset-[-110px] rounded-full border border-accent/40" />
-              <div className="absolute inset-[-160px] rounded-full border border-primary/20" />
-              {ORBIT_ICONS.map((Icon, i) => (
-                <div
-                  key={i}
-                  className="absolute h-12 w-12 rounded-xl glass gilded flex items-center justify-center animate-orbit"
-                  style={{ animationDelay: `${-i * 3}s` }}
-                >
-                  <Icon className="h-5 w-5 text-primary" />
+            <div className="relative w-[88%] h-[92%] rounded-[1.75rem] overflow-hidden gilded shadow-glow">
+              <img
+                src={heroStudent}
+                alt="A focused SCORE MORE student studying under warm lamplight"
+                width={1024}
+                height={1280}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              {/* duotone wash */}
+              <div className="absolute inset-0 mix-blend-color"
+                style={{ background: "linear-gradient(135deg, oklch(0.20 0.06 265 / 0.55), oklch(0.78 0.14 80 / 0.35))" }} />
+              <div className="absolute inset-0"
+                style={{ background: "linear-gradient(180deg, transparent 50%, oklch(0.10 0.04 265 / 0.85))" }} />
+              {/* corner crops */}
+              <span className="absolute top-4 left-4 h-6 w-6 border-t border-l border-primary/80" />
+              <span className="absolute top-4 right-4 h-6 w-6 border-t border-r border-primary/80" />
+              <span className="absolute bottom-4 left-4 h-6 w-6 border-b border-l border-primary/80" />
+              <span className="absolute bottom-4 right-4 h-6 w-6 border-b border-r border-primary/80" />
+              {/* caption plate */}
+              <div className="absolute left-5 right-5 bottom-5 flex items-end justify-between">
+                <div>
+                  <div className="eyebrow text-primary">Plate · 01</div>
+                  <div className="serif-italic text-2xl text-foreground leading-tight mt-1">The pursuit of mastery.</div>
                 </div>
-              ))}
+                <div className="eyebrow text-muted-foreground">SCORE&nbsp;·&nbsp;MORE</div>
+              </div>
             </div>
           </div>
         </div>
