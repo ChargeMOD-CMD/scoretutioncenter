@@ -213,7 +213,6 @@
     text-transform: uppercase;
   }
   .serif-italic { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
-  }
   .glow-ring {
     box-shadow: 0 0 0 1px oklch(0.62 0.21 280 / 0.35), 0 0 30px oklch(0.62 0.21 280 / 0.35);
   }
