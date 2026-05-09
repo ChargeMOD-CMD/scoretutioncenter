@@ -7,9 +7,11 @@ import {
 function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: React.ReactNode; sub?: string }) {
   return (
     <div className="max-w-2xl mb-14">
-      <span className="text-xs uppercase tracking-[0.3em] text-accent">{eyebrow}</span>
-      <h2 className="mt-3 text-4xl md:text-5xl font-bold tracking-tight">{title}</h2>
-      {sub && <p className="mt-4 text-muted-foreground">{sub}</p>}
+      <span className="eyebrow text-primary inline-flex items-center gap-3">
+        <span className="h-px w-8 bg-gradient-gold" /> {eyebrow}
+      </span>
+      <h2 className="mt-4 text-4xl md:text-6xl font-normal tracking-tight leading-[1.05]">{title}</h2>
+      {sub && <p className="mt-5 text-muted-foreground text-lg leading-relaxed">{sub}</p>}
     </div>
   );
 }
