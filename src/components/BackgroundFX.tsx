@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import bgLibrary from "@/assets/bg-library.jpg";
 
 /**
  * "Celestial Codex" — a signature living background.
@@ -78,6 +79,19 @@ export function BackgroundFX() {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      {/* Real photographic backdrop — atmospheric library */}
+      <img
+        src={bgLibrary}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover opacity-[0.35]"
+        style={{ filter: "saturate(0.85) contrast(1.05)" }}
+      />
+      {/* Duotone wash to lock photo into the gold/navy palette */}
+      <div className="absolute inset-0 mix-blend-color"
+        style={{ background: "linear-gradient(135deg, oklch(0.18 0.07 265 / 0.85), oklch(0.78 0.14 80 / 0.35) 60%, oklch(0.20 0.07 220 / 0.7))" }} />
+      <div className="absolute inset-0"
+        style={{ background: "linear-gradient(180deg, oklch(0.10 0.04 265 / 0.55), oklch(0.10 0.04 265 / 0.75))" }} />
+
       {/* Aurora orbs */}
       <div className="absolute -top-40 -left-40 h-[60vmax] w-[60vmax] rounded-full opacity-60 blur-3xl animate-aurora-1"
         style={{ background: "radial-gradient(circle, oklch(0.78 0.14 80 / 0.55), transparent 60%)" }} />
