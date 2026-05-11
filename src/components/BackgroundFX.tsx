@@ -83,14 +83,14 @@ export function BackgroundFX() {
       <img
         src={bgLibrary}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-[0.35]"
-        style={{ filter: "saturate(0.85) contrast(1.05)" }}
+        className="absolute inset-0 h-full w-full object-cover opacity-[0.65]"
+        style={{ filter: "saturate(0.95) contrast(1.08)" }}
       />
       {/* Duotone wash to lock photo into the gold/navy palette */}
       <div className="absolute inset-0 mix-blend-color"
-        style={{ background: "linear-gradient(135deg, oklch(0.18 0.07 265 / 0.85), oklch(0.78 0.14 80 / 0.35) 60%, oklch(0.20 0.07 220 / 0.7))" }} />
+        style={{ background: "linear-gradient(135deg, oklch(0.18 0.07 265 / 0.55), oklch(0.78 0.14 80 / 0.20) 60%, oklch(0.20 0.07 220 / 0.45))" }} />
       <div className="absolute inset-0"
-        style={{ background: "linear-gradient(180deg, oklch(0.10 0.04 265 / 0.55), oklch(0.10 0.04 265 / 0.75))" }} />
+        style={{ background: "linear-gradient(180deg, oklch(0.10 0.04 265 / 0.30), oklch(0.10 0.04 265 / 0.55))" }} />
 
       {/* Aurora orbs */}
       <div className="absolute -top-40 -left-40 h-[60vmax] w-[60vmax] rounded-full opacity-60 blur-3xl animate-aurora-1"
@@ -118,17 +118,8 @@ export function BackgroundFX() {
         ))}
       </div>
 
-      {/* Fine engraved grid */}
-      <div className="absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, oklch(0.92 0.10 95) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.92 0.10 95) 1px, transparent 1px)",
-          backgroundSize: "80px 80px",
-          maskImage: "radial-gradient(ellipse at center, black 40%, transparent 85%)",
-        }} />
-
       {/* Grain */}
-      <div className="absolute inset-0 opacity-[0.10] mix-blend-overlay"
+      <div className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.78  0 0 0 0 0.35  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
@@ -136,7 +127,7 @@ export function BackgroundFX() {
 
       {/* Vignette */}
       <div className="absolute inset-0"
-        style={{ background: "radial-gradient(ellipse at center, transparent 40%, oklch(0.08 0.04 265 / 0.65) 100%)" }} />
+        style={{ background: "radial-gradient(ellipse at center, transparent 50%, oklch(0.08 0.04 265 / 0.55) 100%)" }} />
     </div>
   );
 }
